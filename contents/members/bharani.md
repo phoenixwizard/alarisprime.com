@@ -11,8 +11,8 @@ socialNetworks:
     url: https://github.com/bharani91
 ---
 
-Bharani is a designer, full-stack developer & entrepreneur. He has successfully bootstrapped his first venture – Resumonk, an online resume <abbr>(CV)</abbr> maker.
+Bharani is a designer, full-stack developer and entrepreneur. He has successfully bootstrapped [Resumonk](https://www.resumonk.com) — an online résumé <abbr>(CV)</abbr> maker.
 
-In his previous roles, he has worked with a wide array of startups on different platforms ranging from hybrid mobile applications to rich client web applications.
+He has previously worked with a wide array of startups on different platforms ranging from hybrid mobile applications to rich client web applications.
 
-He is interested in experimenting with new programming languages and frameworks. He also enjoys learning about marketing & user acquisition.
+Bharani is interested in experimenting with new programming languages and frameworks. He also enjoys learning about marketing and user acquisition.

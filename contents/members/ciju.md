@@ -10,8 +10,8 @@ socialNetworks:
     url: https://twitter.com/ciju
 ---
 
-Ciju is a a Programmer, who have interest across programming, mind/brain, learning, education, maths, analytics etc. He started working on JavaScript and Ruby at Slideshare. He learnt a lot of lessons with a few of his un-successful attempts at Startups.
+Ciju is a programmer with interests across mind/brain, learning, education, maths and analytics. He started working on JavaScript and Ruby at Slideshare. He also learned many lessons with a few of his unsuccessful attempts at startups.
 
 He leads the team at ActiveSphere, helping them navigate the complexities of programming in JavaScript, Ruby, and Rails.
 
-Ciju and his team consults with Alaris Prime helping the clients to reach the cutting edge of technology.
+Ciju and his team consult with Alaris Prime to help clients reach the cutting-edge of technology.

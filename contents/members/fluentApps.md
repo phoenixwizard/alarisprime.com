@@ -6,4 +6,4 @@ socialNetworks:
     url: http://fluentapps.in/
 ---
 
-FluentApps is a Mobile App development team, who have a deep understanding of the platform. The team can deliver high quality mobile apps for iOS and Android.
+FluentApps is a mobile apps development team possessing a deep understanding of the platform. They deliver high quality apps for iOS and Android.
