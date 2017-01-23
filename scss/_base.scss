@@ -139,13 +139,31 @@ abbr {
   }
 }
 
-.caps-to-small-caps {
-  font-feature-settings: $base-opentype-features, 'c2sc';
+
+%small-caps {
+  font-feature-settings: $base-opentype-features, 'smcp';
 }
 
 .small-caps {
-  font-feature-settings: $base-opentype-features, 'smcp';
+  @extend %small-caps;
 }
+
+%caps-to-small-caps {
+  font-feature-settings: $base-opentype-features, 'c2sc';
+}
+
+.caps-to-small-caps {
+  @extend %caps-to-small-caps;
+}
+
+%all-to-small-caps {
+  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+}
+
+.all-to-small-caps {
+  @extend %caps-to-small-caps;
+}
+
 
 .sub-title {
   font-weight: $base-font-weight;

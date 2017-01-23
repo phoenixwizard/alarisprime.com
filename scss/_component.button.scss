@@ -1,7 +1,11 @@
+$button-height: $base-vertical-spacing-unit * 1.5;
+
 .button {
   display: inline-block;
-  padding: ($base-vertical-spacing-unit - rem(2)) $base-horizontal-spacing-unit $base-vertical-spacing-unit;
+  padding: 0 $base-horizontal-spacing-unit;
+  font-size: modular-scale(-1);
   font-weight: $base-font-weight-bold;
+  line-height: $button-height;
   color: $color-brand;
   text-align: center;
   text-align: center;
@@ -16,6 +20,7 @@
   &:focus,
   &:active {
     text-shadow: none;
+    background-color: mix($color-shadow, $color-highlight, 10%);
     box-shadow: none;
   }
 }
@@ -28,6 +33,7 @@
   &:focus,
   &:active {
     color: $color-highlight;
+    background-color: mix($color-shadow, $color-brand, 10%);
   }
 }
 
