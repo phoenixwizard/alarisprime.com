@@ -22,6 +22,7 @@ $base-font-weight-bold: 600;
 
 // Spacing
 $base-line-height: 28px; // $root-line-height
+$line-height-heading: 1.33333;
 $base-vertical-spacing-unit: rem($base-line-height / 2);
 $base-horizontal-spacing-unit: rem(($base-line-height * $modular-scale-ratio) / 2);
 
