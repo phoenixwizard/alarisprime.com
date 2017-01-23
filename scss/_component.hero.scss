@@ -11,6 +11,10 @@
     padding-right: ($base-horizontal-spacing-unit * 2);
     padding-left: ($base-horizontal-spacing-unit * 2);
   }
+
+  @include bp(large) {
+    min-height: ($base-vertical-spacing-unit * 21);
+  }
 }
 
 .hero__text-unit {
