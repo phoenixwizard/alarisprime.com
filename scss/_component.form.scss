@@ -2,38 +2,38 @@
 
 .input-label {
   display: block;
-  margin-bottom: $base-vertical-spacing-unit / 2;
+  margin-bottom: $space-x / 2;
   color: $color-text-light;
-  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
 }
 
 .input-control,
 .input-textarea {
   width: 100%;
-  padding: ($base-vertical-spacing-unit / 3) ($base-horizontal-spacing-unit / 3);
-  border: $base-border;
+  padding: ($space-x / 3) ($space-y / 3);
+  border: $border;
   outline: none;
 
   &:focus,
   &:active {
-    border-color: $base-border-color-dark;
+    border-color: $border-color-dark;
   }
 }
 
 .input-textarea {
-  height: $base-vertical-spacing-unit * 6;
+  height: $space-x * 6;
   resize: none;
 
   @include bp(medium) {
-    height: $base-vertical-spacing-unit * 12;
+    height: $space-x * 12;
   }
 }
 
 .form__group {
-  margin-bottom: $base-vertical-spacing-unit;
+  margin-bottom: $space-x;
 }
 
 .form__group--minor {
-  margin-top: -1 * $base-vertical-spacing-unit;
+  margin-top: -1 * $space-x;
   font-size: modular-scale(-1);
 }

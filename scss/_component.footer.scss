@@ -5,19 +5,19 @@
 .footer__inner {
   @include clearfix;
 
-  padding: ($base-vertical-spacing-unit * 2) $base-horizontal-spacing-unit;
-  border-top: $base-border;
+  padding: ($space-x * 2) $space-y;
+  border-top: $border;
 
   @include bp(medium) {
-    padding-right: ($base-horizontal-spacing-unit * 2);
-    padding-left: ($base-horizontal-spacing-unit * 2);
+    padding-right: ($space-y * 2);
+    padding-left: ($space-y * 2);
   }
 }
 
 .footer__content,
 .footer__legal {
   font-size: modular-scale(-1);
-  line-height: 2 * $base-vertical-spacing-unit;
+  line-height: 2 * $space-x;
 
   @include bp(medium) {
     color: $color-text-lighter;
@@ -44,7 +44,7 @@
       @include span-columns(5);
     }
 
-    margin-top: $base-vertical-spacing-unit;
+    margin-top: $space-x;
 
     @include bp(medium) {
       margin-top: 0;

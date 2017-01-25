@@ -12,7 +12,7 @@
 
   @include bp(large) {
     align-items: center;
-    padding: ($base-vertical-spacing-unit * 2) ($base-horizontal-spacing-unit * 2);
+    padding: ($space-x * 2) ($space-y * 2);
   }
 }
 
@@ -26,31 +26,31 @@
 }
 
 .header__brand {
-  padding: (2 * $base-vertical-spacing-unit) $base-horizontal-spacing-unit 0;
+  padding: (2 * $space-x) $space-y 0;
 
   @include bp(medium) {
-    padding-right: ($base-horizontal-spacing-unit * 2);
-    padding-left: ($base-horizontal-spacing-unit * 2);
+    padding-right: ($space-y * 2);
+    padding-left: ($space-y * 2);
   }
 
   @include bp(large) {
-    padding: 0 $base-horizontal-spacing-unit 0 0;
+    padding: 0 $space-y 0 0;
   }
 }
 
 .header__nav {
   @include touch-scroll;
-  padding-left: ($base-horizontal-spacing-unit / 2);
+  padding-left: ($space-y / 2);
   overflow-x: auto;
   overflow-y: hidden;
 
   @include bp(medium) {
-    padding-left: 1.5 * $base-horizontal-spacing-unit;
+    padding-left: 1.5 * $space-y;
   }
 
   @include bp(large) {
     padding-left: 0;
-    margin-right: -1 * ($base-horizontal-spacing-unit / 2);
+    margin-right: -1 * ($space-y / 2);
   }
 
   .main-nav {

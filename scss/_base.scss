@@ -6,10 +6,10 @@
 
 html {
   text-rendering: geometricPrecision;
-  font-feature-settings: $base-opentype-features;
+  font-feature-settings: $opentype-features;
 
   &.wf-active {
-    font-family: 'skolar-sans-latin', $root-font-family;
+    font-family: $font-family;
   }
 }
 
@@ -29,7 +29,7 @@ svg {
 %link-minor {
   color: currentColor;
   box-shadow: 0 1px mix($color-highlight, $color-link, 50%);
-  transition: color $base-transition-delay $base-transition-easing, box-shadow $base-transition-delay $base-transition-easing;
+  transition: color $transition-delay $transition-easing, box-shadow $transition-delay $transition-easing;
 
   &:hover,
   &:active,
@@ -44,7 +44,7 @@ svg {
   color: $color-link;
   text-shadow: none;
   box-shadow: none;
-  transition: color $base-transition-delay $base-transition-easing;
+  transition: color $transition-delay $transition-easing;
 
   &:hover,
   &:active,
@@ -70,16 +70,16 @@ a,
 
 %indented-paragraphs {
   & + & {
-    margin-top: -1 * $base-vertical-spacing-unit * 2;
-    text-indent: $base-horizontal-spacing-unit * 1.5;
+    margin-top: -1 * $space-x * 2;
+    text-indent: $space-y * 1.5;
   }
 }
 
 p {
   @extend %indented-paragraphs;
 
-  margin-bottom: $base-vertical-spacing-unit * 2;
-  font-feature-settings: $base-opentype-features, 'onum';
+  margin-bottom: $space-x * 2;
+  font-feature-settings: $opentype-features, 'onum';
 }
 
 p + br {
@@ -91,6 +91,7 @@ h1,
 h2,
 h3 {
   @include hyphensify;
+  font-family: $font-family-heading;
 }
 
 blockquote,
@@ -98,19 +99,20 @@ dd,
 figure,
 ol,
 ul {
-  margin-bottom: $base-vertical-spacing-unit * 2;
+  margin-bottom: $space-x * 2;
 }
 
 figcaption {
-  padding-top: $base-vertical-spacing-unit * .25;
+  padding-top: $space-x * .25;
   font-size: modular-scale(-1);
-  line-height: $base-vertical-spacing-unit * 1.25;
+  line-height: $space-x * 1.25;
   color: $color-text-light;
 }
 
 blockquote {
+  font-family: $font-family-heading;
   font-size: modular-scale(1);
-  font-feature-settings: $base-opentype-features, 'dlig';
+  font-feature-settings: $opentype-features, 'dlig';
 
   cite {
     display: block;
@@ -126,22 +128,22 @@ blockquote {
 }
 
 strong {
-  font-weight: $base-font-weight-bold;
+  font-weight: $font-weight-bold;
 }
 
 abbr {
-  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
 
   &[title] {
     text-decoration: none;
     cursor: help;
-    border-bottom: $base-border-width dotted $base-border-color-dark;
+    border-bottom: $border-width dotted $border-color-dark;
   }
 }
 
 
 %small-caps {
-  font-feature-settings: $base-opentype-features, 'smcp';
+  font-feature-settings: $opentype-features, 'smcp';
 }
 
 .small-caps {
@@ -149,7 +151,7 @@ abbr {
 }
 
 %caps-to-small-caps {
-  font-feature-settings: $base-opentype-features, 'c2sc';
+  font-feature-settings: $opentype-features, 'c2sc';
 }
 
 .caps-to-small-caps {
@@ -157,18 +159,18 @@ abbr {
 }
 
 %all-to-small-caps {
-  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
 }
 
 .all-to-small-caps {
-  @extend %caps-to-small-caps;
+  @extend %all-to-small-caps;
 }
 
-
 .sub-title {
-  font-weight: $base-font-weight;
+  @extend %all-to-small-caps;
+  font-weight: $font-weight;
+  letter-spacing: .026659913em; // .4px / 15px
   color: $color-text-light;
-  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 
   @include bp(medium) {
     font-size: modular-scale(-1);

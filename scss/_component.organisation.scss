@@ -12,8 +12,8 @@
 
 .organisation {
   width: 100%;
-  margin-right: $base-vertical-spacing-unit * 2;
-  margin-bottom: $base-vertical-spacing-unit;
+  margin-right: $space-x * 2;
+  margin-bottom: $space-x;
 
   @include bp(medium) {
     width: auto;
@@ -26,9 +26,9 @@
 
 .organisation__logo-link {
   display: block;
-  // width: $base-vertical-spacing-unit * 10.55555556; // 16:9 of line height
+  // width: $space-x * 10.55555556; // 16:9 of line height
   width: auto;
-  line-height: $base-vertical-spacing-unit * 5;
+  line-height: $space-x * 5;
   text-align: center;
   opacity: .3;
 
@@ -41,7 +41,7 @@
 
 .organisation__logo {
   display: block;
-  height: $base-vertical-spacing-unit * 3;
+  height: $space-x * 3;
   max-width: none;
   vertical-align: middle;
 }

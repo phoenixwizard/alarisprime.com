@@ -34,7 +34,7 @@
   overflow-y: auto;
 
   background-color: $color-white;
-  border: $base-border;
+  border: $border;
 
   border-top-width: 0;
   border-right-width: 0;
@@ -43,9 +43,9 @@
   @include bp(medium) {
     @include span-columns(7);
 
-    border-top-width: $base-border-width;
-    border-right-width: $base-border-width;
-    border-left-width: $base-border-width;
+    border-top-width: $border-width;
+    border-right-width: $border-width;
+    border-left-width: $border-width;
   }
 
   @include bp(large) {
@@ -57,10 +57,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: $base-horizontal-spacing-unit * 2;
+  width: $space-y * 2;
 
   font-size: modular-scale(2);
-  line-height: $base-vertical-spacing-unit * 3;
+  line-height: $space-x * 3;
   color: $color-text-light;
   text-align: center;
   text-shadow: none;
