@@ -4,9 +4,8 @@
 
 .hero-quote__inner {
   @include span-columns(12);
-
   padding: $space-x $space-y;
-
+  font-weight: $font-weight-bold;
   color: $color-text;
 
   @include bp(medium) {
