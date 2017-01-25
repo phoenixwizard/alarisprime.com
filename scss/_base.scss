@@ -127,13 +127,11 @@ blockquote {
   }
 }
 
-strong {
-  font-family: $font-family-heading;
-  font-weight: $font-weight-bold;
-}
-
+strong,
 em {
+  font-family: $font-family-heading;
   font-style: normal;
+  font-weight: $font-weight-bold;
 }
 
 abbr {
