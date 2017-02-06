@@ -5,14 +5,14 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.js$/,
-				loaders: ['babel-loader']
+				use: ['babel-loader']
 			},
 			{
 				test: require.resolve('turbolinks'),
-				loader: 'imports?this=>window'
+				use: 'imports-loader?this=>window'
 			}
 		]
 	}
