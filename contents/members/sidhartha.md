@@ -8,8 +8,8 @@ socialNetworks:
     url: http://sidharthachatterjee.com
 ---
 
-Sidhartha is a software de­vel­oper and en­tre­pre­neur with a passion for finding elegant solutions to hard problems and tiramisu.
+Sidhartha is a software de­vel­oper and en­tre­pre­neur with a passion for finding elegant solutions to hard problems, and tiramisu.
 
 He has previously worked for [Insider.in](https://insider.in/) where he built much of the complex microservices and setup infrastructure. 
 
-Besides functional programming and DevOps, he has a special interest in serverless computing. On a Sunday, you'll find him playing the guitar or walking his dog, Love. 
+Besides functional programming and DevOps, he has special interests in serverless computing. On Sundays, you'll find him playing the guitar or walking his dog, Love.
