@@ -15,14 +15,14 @@ $ yarn # install dependencies
 
 ### File structure
 
-	|-- root - Keep all static files — robots.txt, favicon.ico,… – which needs to be copied to the root of the website
-	|-- images 
+	|-- root - Keep all static files - robots.txt, favicon.ico,… - which needs to be copied to the root of the website
+	|-- images
 	|-- contents - pages to be rendered
 		+-- projects - the files from this folder will not be rendered. It is used as collections to populate `projects` page.
 	|-- layouts - Nunjucks templates, which can be used for pages
 	|-- macros - Nunjucks macro files
 	|-- includes - Nunjucks include files
-	|-- scss 
+	|-- scss
 	+-- scripts
 
 ### Adding a new page
