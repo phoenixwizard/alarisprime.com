@@ -1015,9 +1015,9 @@ bourbon-neat@1.8.0:
   dependencies:
     node-sass "^3.4"
 
-bourbon@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.0.tgz#d772c698949f2c9baa9746c854a8e56121e86ff1"
+bourbon@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.1.tgz#591bdd7a14e795ece1f847f846e7bd6c55d847ea"
 
 boxen@^0.6.0:
   version "0.6.0"
@@ -6501,7 +6501,7 @@ uc.micro@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
 
-uglify-js@2.7.0, uglify-js@2.7.x, uglify-js@^2.6:
+uglify-js@2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.0.tgz#f021e38ba2ca740860f5bd5c695c2a817345f0ec"
   dependencies:
@@ -6510,7 +6510,7 @@ uglify-js@2.7.0, uglify-js@2.7.x, uglify-js@^2.6:
     uglify-to-browserify "~1.0.0"
     yargs "~3.10.0"
 
-uglify-js@^2.7.5:
+uglify-js@2.7.x, uglify-js@^2.6, uglify-js@^2.7.5:
   version "2.7.5"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.5.tgz#4612c0c7baaee2ba7c487de4904ae122079f2ca8"
   dependencies:
