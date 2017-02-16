@@ -1,6 +1,8 @@
 ---
 name: MobileFirst Applications
 email: arpan@mobilefirst.in
+logoUrl: /images/logo-MobileFirst.png
+
 socialNetworks:
   - title: GitHub
     url: https://github.com/mobilefirstinc
