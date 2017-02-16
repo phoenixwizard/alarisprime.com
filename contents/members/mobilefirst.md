@@ -8,8 +8,8 @@ socialNetworks:
     url: http://mobilefirst.in
 ---
 
-MobileFirst is a mobile development studio building iOS (Swift), macOS & Android applications. 
+MobileFirst is a mobile development studio building iOS, macOS & Android applications. 
 
-They have shipped great consumer & enterprise mobile applications for few of largest organisations and their work got featured in Apple's PR. 
+They have shipped great consumer & enterprise mobile applications for some of largest organizations. Their work were featured in Apple's PR. 
 
-MobileFirst team is actively involved building `Apple Developers Club`, #2 largest Swift developers meetup community in India. Additionally they maintain few interesting Swift repos.
+MobileFirst team is actively involved in building `Apple Developers Club`, #2 largest Swift developers meetup community in India. Additionally, they maintain few interesting Swift repositories.
