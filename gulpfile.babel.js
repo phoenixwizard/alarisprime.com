@@ -62,7 +62,8 @@ gulp.task('metalsmith', cb => {
 		]))
 		.use(require('metalsmith-in-place')({
 			engineOptions: {
-				cache: false
+				cache: false,
+				noCache: true
 			}
 		}))
 		.use(require('metalsmith-permalinks')())
