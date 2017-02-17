@@ -1,6 +1,7 @@
 .logo {
   display: inline-block;
   height: $space-x * 1.5;
+  width: $space-x * 1.5 * 8.403637199; // aspect ratio of logo.svg
 
   svg {
     display: block;
