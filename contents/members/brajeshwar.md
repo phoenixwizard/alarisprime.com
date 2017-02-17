@@ -1,6 +1,7 @@
 ---
 name: Brajeshwar Oinam
 email: brajeshwar@oinam.com
+photoBrightness: darker
 socialNetworks:
   - title: LinkedIn
     url: http://www.linkedin.com/in/brajeshwar
