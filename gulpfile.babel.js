@@ -35,6 +35,9 @@ gulp.task('metalsmith', () => {
 					md5: md5,
 					objectKeys: Object.keys
 				}),
+				require('metalsmith-ignore')([
+					'**/_*'
+				]),
 				require('metalsmith-collections')({
 					projects: {
 						pattern: 'projects/**/*',
