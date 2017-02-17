@@ -10,6 +10,8 @@ import merge from 'merge-stream';
 import metalsmithMarkdown from 'metalsmith-markdownit';
 import md5 from 'md5';
 
+import Metalsmith from 'metalsmith';
+
 const $ = gulpLoadPlugins();
 const md = metalsmithMarkdown({
 	breaks: true,
@@ -23,53 +25,57 @@ siteConfig.date = new Date();
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('metalsmith', () => {
-	return gulp.src([
-		'contents/**/*.{html,md}'
-	])
-		.pipe($.metalsmith({
-			use: [
-				require('metalsmith-define')({
-					site: siteConfig,
-					console: console,
-					md5: md5,
-					objectKeys: Object.keys
-				}),
-				require('metalsmith-ignore')([
-					'**/_*'
-				]),
-				require('metalsmith-collections')({
-					projects: {
-						pattern: 'projects/**/*',
-						sortBy: 'date',
-						reverse: true
-					},
-					members: {
-						pattern: 'members/**/*',
-						sortBy: 'name'
-					}
-				}),
-				md,
-				require('metalsmith-ignore')([
-					'projects/*',
-					'members/*'
-				]),
-				require('metalsmith-permalinks')(),
-				require('metalsmith-in-place')({
-					engine: 'nunjucks',
-					rename: true,
-					settings: {
-						opts: {
-							noCache: true
-						}
-					}
-				}),
-				require('metalsmith-hyphenate')({
-					elements: ['p', 'figcaption', 'li', 'ol']
-				})
-			]
+gulp.task('metalsmith', cb => {
+	const metalsmith = new Metalsmith(__dirname);
+
+	metalsmith
+		.source('./src')
+		.destination('./dist')
+		.clean(false)
+		.use(require('metalsmith-define')({
+			site: siteConfig,
+			console: console,
+			md5: md5,
+			objectKeys: Object.keys
 		}))
-		.pipe(gulp.dest('dist'));
+		.use(require('metalsmith-ignore')([
+			'**/_*',
+			'includes/**',
+			'layouts/**',
+			'macros/**'
+		]))
+		.use(require('metalsmith-collections')({
+			projects: {
+				pattern: 'projects/**/*',
+				sortBy: 'date',
+				reverse: true
+			},
+			members: {
+				pattern: 'members/**/*',
+				sortBy: 'name'
+			}
+		}))
+		.use(md)
+		.use(require('metalsmith-ignore')([
+			'projects/*',
+			'members/*'
+		]))
+		.use(require('metalsmith-in-place')({
+			engineOptions: {
+				cache: false
+			}
+		}))
+		.use(require('metalsmith-permalinks')())
+		.use(require('metalsmith-hyphenate')({
+			elements: ['p', 'figcaption', 'li', 'ol']
+		}))
+		.build(err => {
+			if (err) {
+				throw err;
+			}
+
+			cb();
+		});
 });
 
 const webpackConfig = require('./webpack.config');
@@ -118,7 +124,7 @@ gulp.task('copy:images', () => {
 gulp.task('copy', ['copy:root', 'copy:images']);
 
 gulp.task('sitemap', function () {
-	return gulp.src('dist/**/*.html', {
+	return gulp.src('dist/**/*.njk', {
 		read: false
 	})
 	.pipe($.filter([
@@ -262,11 +268,11 @@ gulp.task('serve', ['build-core'], () => {
 	});
 
 	gulp.watch([
-		'contents/**/*.md',
-		'contents/**/*.html',
-		'includes/**/*.html',
-		'macros/**/*.html',
-		'layouts/**/*.html'
+		'src/**/*.md',
+		'src/**/*.njk',
+		'includes/**/*.njk',
+		'macros/**/*.njk',
+		'layouts/**/*.njk'
 	], ['metalsmith']);
 
 	gulp.watch([

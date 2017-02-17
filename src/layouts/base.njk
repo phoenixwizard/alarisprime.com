@@ -1,4 +1,4 @@
-{% from "../macros/overlay-contact-form.html" import overlayContactForm %}
+{% from "../macros/overlay-contact-form.njk" import overlayContactForm %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -43,12 +43,12 @@
 		<!-- endbuild -->
 	</head>
 	<body>
-		{% include "../includes/header.html" %}
+		{% include "../includes/header.njk" %}
 
 		{% block content %}
 		{% endblock %}
 
-		{% include "../includes/footer.html" %}
+		{% include "../includes/footer.njk" %}
 		{{ overlayContactForm(
 			email=site.contactEmail,
 			pageIdentifier=title,
