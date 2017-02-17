@@ -15,8 +15,8 @@
     "url": "git@github.com:alarisprime/alarisprime.com.git"
   },
   "contributors": [
-    "Saneef Ansari <s@alarisprime.com> (https://saneef.com/)",
-    "Brajeshwar Oinam <b@alarisprime.com> (https://brajeshwar.me/)"
+    "Saneef Ansari <saneef@alarisprime.com> (https://saneef.com/)",
+    "Brajeshwar Oinam <brajeshwar@alarisprime.com> (https://brajeshwar.me/)"
   ],
   "license": "CC0 1.0 Universal",
   "homepage": "https://alarisprime.com",
@@ -36,7 +36,6 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.1",
     "gulp-load-plugins": "^1.3.0",
-    "gulp-metalsmith": "^1.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
     "gulp-print": "^2.0.1",
