@@ -8,7 +8,7 @@
 			<div class="avatar{% if metaData.photoBrightness %} avatar--{{metaData.photoBrightness }}{% endif %}">{{ profileImgSrcset(class=imageClassNames, emailHash=md5Fn(metaData.email)) }}</div>
 		{% endif %}
 		{% if metaData.logoUrl %}
-			<span class="organisation-logo">
+			<span class="organisation-logo{% if metaData.logoLarge %} organisation-logo--large{% endif %}">
 				<img src="{{metaData.logoUrl}}" alt="Logo of {{ metaData.name }}" class="organisation-logo__image">
 			</span>
 		{% else %}
