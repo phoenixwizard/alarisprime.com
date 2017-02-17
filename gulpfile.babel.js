@@ -42,7 +42,8 @@ gulp.task('metalsmith', cb => {
 			'**/_*',
 			'includes/**',
 			'layouts/**',
-			'macros/**'
+			'macros/**',
+			'images/**',
 		]))
 		.use(require('metalsmith-collections')({
 			projects: {
@@ -117,7 +118,7 @@ gulp.task('copy:root', () => {
 
 gulp.task('copy:images', () => {
 	return gulp.src([
-		'images/**/*'
+		'src/images/**/*'
 	])
 	.pipe(gulp.dest('dist/images'));
 });
