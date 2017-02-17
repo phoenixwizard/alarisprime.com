@@ -43,7 +43,7 @@ gulp.task('metalsmith', cb => {
 			'includes/**',
 			'layouts/**',
 			'macros/**',
-			'images/**',
+			'images/**'
 		]))
 		.use(require('metalsmith-collections')({
 			projects: {
