@@ -3,7 +3,7 @@ name: Sidhartha Chatterjee
 email: me@sidharthachatterjee.com
 socialNetworks:
   - title: GitHub
-    url: https://github.com/sidharthac
+    url: https://github.com/sidharthachatterjee
   - title: Website
     url: http://sidharthachatterjee.com
 ---

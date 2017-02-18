@@ -5,7 +5,7 @@ socialNetworks:
   - title: Website
     url: http://ankursethi.in/
   - title: Twitter
-    url: http://twitter.com/GnrlMxms
+    url: http://twitter.com/ankurs3thi
 ---
 
 Ankur takes selfies, listens to way too much hip-hop, and writes JavaScript.
