@@ -168,8 +168,8 @@ gulp.task('useref', () => {
 
 	return gulp.src('dist/**/*.html')
 		.pipe($.useref(userefConfig))
-		.pipe($.if('*.js', $.uglify()))
 		.pipe($.if('*.css', $.cssnano()))
+		.pipe($.if('*.js', $.uglify()))
 		.pipe($.if('*.html', $.htmlmin({
 			removeComments: true,
 			cleanConditionalComment: false,
