@@ -1,3 +1,4 @@
+$root-font-size-px: 18;
 // Bourbon
 $em-base: 18px;
 
@@ -11,7 +12,7 @@ $gutter: 1.209876543em; // (28 / 2 * 1.5555555556) / 18px
 
 // Sanitize.css
 $root-font-family: 'Source Sans Pro', 'Open Sans', Avenir, 'Gill Sans MT', 'Gill Sans', Corbel, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$root-font-size: 112.5%; // 18px
+$root-font-size: percentage($root-font-size-px / 16);
 $root-line-height: 1.555555556; // 28px
 $selection-background-color: #87d6b8;
 $selection-text-shadow: 1px 1px rgba(0, 0, 0, .15);

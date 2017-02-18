@@ -18,6 +18,7 @@ $color-link-hover: mix($color-shadow, $color-brand, 10%);
 $font-family:         'skolar-sans-latin', $root-font-family;
 $font-family-heading: 'skolar-latin', $root-font-family;
 
+$font-size: #{$root-font-size-px}px;
 $font-weight:      400;
 $font-weight-bold: 600;
 
@@ -27,8 +28,8 @@ $opentype-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
 $line-height: 28px; // $root-line-height
 $line-height-heading: 1.33333;
 
-$space-x: rem($line-height / 2);
-$space-y: rem(($line-height * $modular-scale-ratio) / 2);
+$space-x: 1rem * ((strip-units($line-height) / 2) / $root-font-size-px);
+$space-y: $space-x * $modular-scale-ratio;
 
 // Border
 $border-color: mix($color-highlight, $color-grey-lighter, 30%);

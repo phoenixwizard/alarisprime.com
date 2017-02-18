@@ -18,7 +18,9 @@ $breakpoints: ();
   @if ($pixels == 0) {
     $breakpoints: map-merge($breakpoints, ($key: '#{$screen-string}'));
   } @else {
-    $breakpoints: map-merge($breakpoints, ($key: '#{$screen-string} and (min-width: #{em($pixels, 16)})'));
+    $breakpoints: map-merge(
+      $breakpoints,
+      ($key: '#{$screen-string} and (min-width: #{$pixels / 16}em)'));
   }
 }
 
