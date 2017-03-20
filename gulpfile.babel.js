@@ -34,8 +34,8 @@ gulp.task('metalsmith', cb => {
 		.clean(false)
 		.use(require('metalsmith-define')({
 			site: siteConfig,
-			console: console,
-			md5: md5,
+			console,
+			md5,
 			objectKeys: Object.keys
 		}))
 		.use(require('metalsmith-ignore')([
@@ -83,7 +83,7 @@ gulp.task('metalsmith', cb => {
 const webpackConfig = require('./webpack.config');
 
 gulp.task('scripts', cb => {
-	webpack(webpackConfig, function (err, stats) {
+	webpack(webpackConfig, (err, stats) => {
 		if (err) {
 			throw new $.util.PluginError('webpack', err);
 		}
@@ -125,7 +125,7 @@ gulp.task('copy:images', () => {
 
 gulp.task('copy', ['copy:root', 'copy:images']);
 
-gulp.task('sitemap', function () {
+gulp.task('sitemap', () => {
 	return gulp.src('dist/**/*.njk', {
 		read: false
 	})
@@ -191,8 +191,8 @@ gulp.task('assets-rev', () => {
 	.pipe($.rev.manifest())
 	.pipe(gulp.dest('./dist/'))
 	.pipe(through2.obj((file, enc, next) => {
-		let manifest = require(file.path); // eslint-disable-line import/no-dynamic-require
-		let paths = Object.keys(manifest).map(x => './dist/' + x);
+		const manifest = require(file.path); // eslint-disable-line import/no-dynamic-require
+		const paths = Object.keys(manifest).map(x => './dist/' + x);
 
 		del.sync(paths);
 
@@ -201,13 +201,13 @@ gulp.task('assets-rev', () => {
 });
 
 gulp.task('assets-rev-replace', ['assets-rev'], () => {
-	let manifest = gulp.src('./dist/rev-manifest.json');
+	const manifest = gulp.src('./dist/rev-manifest.json');
 
 	return gulp.src([
 		'./dist/**'
 	])
 	.pipe($.revReplace({
-		manifest: manifest,
+		manifest,
 		replaceInExtensions: ['.js', '.css', '.html', '.xml']
 	}))
 	.pipe(gulp.dest('dist'));
@@ -261,7 +261,7 @@ gulp.task('serve', ['build-core'], () => {
 		rewriteRules: [
 			{
 				match: /<body/g,
-				fn: function () {
+				fn() {
 					return '<body data-turbolinks="false"';
 				}
 			}
