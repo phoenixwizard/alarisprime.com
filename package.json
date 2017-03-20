@@ -47,7 +47,7 @@
     "gulp-sitemap": "^4.2.0",
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.1.0",
+    "gulp-uglify": "^2.1.1",
     "gulp-useref": "^3.1.2",
     "gulp-util": "^3.0.8",
     "gulp-xo": "^0.15.0",
