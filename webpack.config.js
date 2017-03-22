@@ -1,7 +1,9 @@
+import path from 'path';
+
 module.exports = {
-	entry: './scripts/entry.js',
+	entry: path.join(__dirname, './scripts/entry.js'),
 	output: {
-		path: './dist/scripts/',
+		path: path.join(__dirname, './dist/scripts/'),
 		filename: 'bundle.js'
 	},
 	module: {
