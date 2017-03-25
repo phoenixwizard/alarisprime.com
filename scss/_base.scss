@@ -28,6 +28,7 @@ svg {
 
 %link-minor {
   color: currentColor;
+  text-decoration: none;
   box-shadow: 0 1px color('link-light');
   transition: color $delay $easing, box-shadow $delay $easing;
 
@@ -91,7 +92,6 @@ h1,
 h2,
 h3 {
   @include hyphensify;
-  font-family: $font-family-heading;
 }
 
 blockquote,
@@ -110,7 +110,6 @@ figcaption {
 }
 
 blockquote {
-  font-family: $font-family-heading;
   font-size: modular-scale(1);
   font-feature-settings: $font-features, 'dlig';
 
@@ -129,7 +128,6 @@ blockquote {
 
 strong,
 em {
-  font-family: $font-family-heading;
   font-style: normal;
   font-weight: $font-weight-bold;
 }

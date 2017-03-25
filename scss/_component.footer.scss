@@ -22,6 +22,10 @@
   @include bp(medium) {
     color: color('text-lighter');
   }
+
+  .link {
+    font-family: $font-family-alt;
+  }
 }
 
 .footer__content {

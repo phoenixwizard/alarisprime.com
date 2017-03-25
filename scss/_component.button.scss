@@ -3,6 +3,7 @@ $button-height: $space-l;
 .button {
   display: inline-block;
   padding: 0 $space-default;
+  font-family: $font-family-alt;
   font-size: modular-scale(-1);
   font-weight: $font-weight-bold;
   line-height: $button-height;
