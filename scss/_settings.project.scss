@@ -22,8 +22,8 @@ $modular-scale-ratio: $root-scaling-ratio;
 
 $colors: (
   'brand':        #00a86b,
-  'shadow':       #0d1c0d,
-  'highlight':    #f2f5f5,
+  'shadow':       #222222,
+  'highlight':    #fafafa,
   'white':        #ffffff,
 
   'grey-lighter': #d1d6d4,
@@ -33,16 +33,15 @@ $colors: (
 
   'brand-dark':   'brand' ('shade': 10%),
 
-  'text': 'shadow',
-  'text-light': 'grey',
+  'bg':           'highlight',
+  'text':         'shadow',
+  'text-light':   'grey',
   'text-lighter': 'grey-light',
-
-  'link': 'brand',
-  'link-light': 'brand' ('tint': 10%),
-  // mix shadow  brand  10
-  'link-hover': 'brand' ('shade': 10%),
-  'border': 'grey-lighter' ('tint': 30%),
-  'border-dark': 'grey-lighter' ('shade': 20%),
+  'link':         'brand',
+  'link-light':   'brand' ('tint': 65%),
+  'link-hover':   'brand' ('shade': 10%),
+  'border':       'grey-lighter' ('tint': 30%),
+  'border-dark':  'grey-lighter' ('shade': 20%),
 );
 
 // ---
