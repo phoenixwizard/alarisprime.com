@@ -4,21 +4,21 @@
 
 .hero-quote__inner {
   // @include span-columns(12);
-  padding: ($space-x * 2) $space-y;
+  padding: ($space-l) $space-default;
   font-weight: $font-weight-bold;
   color: color('text');
 
   @include bp(medium) {
     // @include span-columns(9);
 
-    padding-right: ($space-y * 2);
-    padding-left: ($space-y * 2);
+    padding-right: ($space-l);
+    padding-left: ($space-l);
   }
 
   @include bp(large) {
     // @include span-columns(7);
-    padding-top: ($space-x * 4);
-    padding-bottom: ($space-x * 4);
+    padding-top: ($space-xl);
+    padding-bottom: ($space-xl);
   }
 
   a {
@@ -28,9 +28,9 @@
 
 .hero-quote__quote {
   position: relative;
-  padding-left: ($space-y);
+  padding-left: ($space-default);
   margin-bottom: 0;
-  margin-left: -1 * ($space-y);
+  margin-left: -1 * ($space-default);
   font-size: modular-scale(1);
   line-height: $line-height-heading;
 

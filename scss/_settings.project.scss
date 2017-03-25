@@ -39,8 +39,8 @@ $colors: (
 
   'link': 'brand',
   'link-light': 'brand' ('tint': 10%),
-  'link-hover': 'brand' ('shade': 10%), // mix shadow  brand  10%
-
+  // mix shadow  brand  10
+  'link-hover': 'brand' ('shade': 10%),
   'border': 'grey-lighter' ('tint': 30%),
   'border-dark': 'grey-lighter' ('shade': 20%),
 );
@@ -66,8 +66,15 @@ $font-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
 // Spaces
 // ---
 
-$space-x: 1rem * ((strip-units($line-height) / 2) / $root-font-size-px);
-$space-y: $space-x * $modular-scale-ratio;
+$space-default: 1rem * (($root-line-height / 2) / $root-font-size-px);;
+
+$space-xxs: $space-default / 8;
+$space-xs:  $space-default / 4;
+$space-s:   $space-default / 2;
+$space-m:   $space-default;
+$space-l:   $space-default * 2;
+$space-xl:  $space-default * 4;
+$space-xxl: $space-default * 8;
 
 // ---
 // Border
@@ -82,7 +89,7 @@ $border: $border-width solid color('border');
 // ---
 
 // Delay
-$transition-delay: .1s;
+$delay: .1s;
 
 // Easing
-$transition-easing: ease-out;
+$easing: ease-out;

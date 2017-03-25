@@ -12,8 +12,8 @@
 
 .organisation {
   width: 100%;
-  margin-right: $space-x * 2;
-  margin-bottom: $space-x;
+  margin-right: $space-l;
+  margin-bottom: $space-default;
 
   @include bp(medium) {
     width: auto;
@@ -26,9 +26,8 @@
 
 .organisation__logo-link {
   display: block;
-  // width: $space-x * 10.55555556; // 16:9 of line height
   width: auto;
-  line-height: $space-x * 5;
+  line-height: $space-xl;
   text-align: center;
   opacity: .3;
 
@@ -41,7 +40,7 @@
 
 .organisation__logo {
   display: block;
-  height: $space-x * 3;
+  height: $space-xl;
   max-width: none;
   vertical-align: middle;
 }

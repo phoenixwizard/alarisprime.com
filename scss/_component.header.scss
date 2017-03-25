@@ -12,7 +12,7 @@
 
   @include bp(large) {
     align-items: center;
-    padding: ($space-x * 2) ($space-y * 2);
+    padding: ($space-l);
   }
 }
 
@@ -26,31 +26,31 @@
 }
 
 .header__brand {
-  padding: (2 * $space-x) $space-y 0;
+  padding: (2 * $space-default) $space-default 0;
 
   @include bp(medium) {
-    padding-right: ($space-y * 2);
-    padding-left: ($space-y * 2);
+    padding-right: ($space-l);
+    padding-left: ($space-l);
   }
 
   @include bp(large) {
-    padding: 0 $space-y 0 0;
+    padding: 0 $space-default 0 0;
   }
 }
 
 .header__nav {
   @include touch-scroll;
-  padding-left: ($space-y / 2);
+  padding-left: ($space-s);
   overflow-x: auto;
   overflow-y: hidden;
 
   @include bp(medium) {
-    padding-left: 1.5 * $space-y;
+    padding-left: 1.5 * $space-default;
   }
 
   @include bp(large) {
     padding-left: 0;
-    margin-right: -1 * ($space-y / 2);
+    margin-right: -1 * ($space-s);
   }
 
   .main-nav {

@@ -2,7 +2,7 @@
 
 .input-label {
   display: block;
-  margin-bottom: $space-x / 2;
+  margin-bottom: $space-s;
   color: color('text-light');
   font-feature-settings: $font-features, 'smcp', 'c2sc';
 }
@@ -10,7 +10,7 @@
 .input-control,
 .input-textarea {
   width: 100%;
-  padding: ($space-x / 3) ($space-y / 3);
+  padding: ($space-default / 3);
   border: $border;
   outline: none;
 
@@ -21,19 +21,17 @@
 }
 
 .input-textarea {
-  height: $space-x * 6;
+  height: $space-xxl;
   resize: none;
 
-  @include bp(medium) {
-    height: $space-x * 12;
-  }
+  // @include bp(medium) {}
 }
 
 .form__group {
-  margin-bottom: $space-x;
+  margin-bottom: $space-default;
 }
 
 .form__group--minor {
-  margin-top: -1 * $space-x;
+  margin-top: -1 * $space-default;
   font-size: modular-scale(-1);
 }

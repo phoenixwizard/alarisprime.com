@@ -1,8 +1,8 @@
-$button-height: $space-x * 1.5;
+$button-height: $space-l;
 
 .button {
   display: inline-block;
-  padding: 0 $space-y;
+  padding: 0 $space-default;
   font-size: modular-scale(-1);
   font-weight: $font-weight-bold;
   line-height: $button-height;
@@ -38,7 +38,7 @@ $button-height: $space-x * 1.5;
 }
 
 .button--small {
-  padding: ($space-x / 3 - (2 / $root-font-size-px)) ($space-y / 2) ($space-x / 3);
+  padding: ($space-default / 3 - (2 / $root-font-size-px)) ($space-s) ($space-default / 3);
 }
 
 .button--inline {

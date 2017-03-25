@@ -1,6 +1,6 @@
 .organisation-logo {
   display: inline-block;
-  height: $space-x * 3;
+  height: $space-xl;
 
   img {
     display: block;
@@ -10,5 +10,5 @@
 }
 
 .organisation-logo--large {
-  height: $space-x * 6;
+  height: $space-xxl;
 }

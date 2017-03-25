@@ -1,5 +1,5 @@
 .logo {
-  $height-logo: $space-x * 1.5;
+  $height-logo: $space-m;
 
   display: inline-block;
   width:  $height-logo * 8.403637199; // aspect ratio of logo.svg
@@ -13,7 +13,7 @@
 }
 
 .logo--tiny {
-  height: $space-x * .75;
+  height: $space-s;
   vertical-align: baseline;
 }
 

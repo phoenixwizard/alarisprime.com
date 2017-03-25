@@ -5,8 +5,8 @@ html {
   font-size: percentage($root-font-size-px / 16);
   line-height: $root-line-height / $root-font-size-px;
   color: color('text');
-  font-feature-settings: $font-features;
   text-rendering: geometricPrecision;
+  font-feature-settings: $font-features;
 
   &.wf-active {
     font-family: $font-family;
@@ -29,7 +29,7 @@ svg {
 %link-minor {
   color: currentColor;
   box-shadow: 0 1px color('link-light');
-  transition: color $transition-delay $transition-easing, box-shadow $transition-delay $transition-easing;
+  transition: color $delay $easing, box-shadow $delay $easing;
 
   &:hover,
   &:active,
@@ -44,7 +44,7 @@ svg {
   color: color('link');
   text-shadow: none;
   box-shadow: none;
-  transition: color $transition-delay $transition-easing;
+  transition: color $delay $easing;
 
   &:hover,
   &:active,
@@ -70,15 +70,15 @@ a,
 
 %indented-paragraphs {
   & + & {
-    margin-top: -1 * $space-x * 2;
-    text-indent: $space-y * 1.5;
+    margin-top: -1 * $space-l;
+    text-indent: $space-l;
   }
 }
 
 p {
   @extend %indented-paragraphs;
 
-  margin-bottom: $space-x * 2;
+  margin-bottom: $space-l;
   font-feature-settings: $font-features, 'onum';
 }
 
@@ -99,13 +99,13 @@ dd,
 figure,
 ol,
 ul {
-  margin-bottom: $space-x * 2;
+  margin-bottom: $space-l;
 }
 
 figcaption {
-  padding-top: $space-x * .25;
+  padding-top: $space-xs;
   font-size: modular-scale(-1);
-  line-height: $space-x * 1.25;
+  line-height: $line-height-heading;
   color: color('text-light');
 }
 

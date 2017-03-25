@@ -57,10 +57,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: $space-y * 2;
+  width: $space-l;
 
   font-size: modular-scale(2);
-  line-height: $space-x * 3;
+  line-height: $space-xl;
   color: color('text-light');
   text-align: center;
   text-shadow: none;
