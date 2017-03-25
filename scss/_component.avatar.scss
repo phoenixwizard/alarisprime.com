@@ -3,11 +3,29 @@
   width: $space-xxl;
   height: $space-xxl;
   border-radius: 2000px;
+
+  @include bp(medium) {
+    width: $space-xl;
+    height: $space-xl;
+  }
 }
 
 .avatar {
+  position: relative;
   display: inline-block;
   background-color: color('grey-lighter');
+
+  &::after {
+    position: absolute;
+    top: $space-xxs;
+    right: $space-xxs;
+    bottom: $space-xxs;
+    left: $space-xxs;
+    display: block;
+    border: $border-width-large $border-style color('bg');
+    border-radius: 2000px;
+    content: '';
+  }
 }
 
 .avatar__image {

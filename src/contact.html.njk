@@ -6,6 +6,7 @@ title: Contact
 
 {% from "./macros/contact-trigger-tag.njk" import contactTriggerTag %}
 {% from "./macros/contact-form.njk" import contactForm %}
+{% from "./macros/divider.njk" import divider %}
 
 {% block content %}
 <article class="article">
@@ -13,12 +14,12 @@ title: Contact
 		<div class="article__header">
 			<h1 class="article__title">Contact</h1>
 		</div>
-		<div class="article__content">
+		<div class="article__content article__content--column">
 			<p>You can email to us on <a class="link link--minor" href="mailto:{{site.contactEmail}}">{{site.contactEmail}}</a>.</p>
 		</div>
 	</div>
 </article>
-
+{{ divider() }}
 {{ contactForm(
 	pageIdentifier=title,
 	email=site.contactEmail,

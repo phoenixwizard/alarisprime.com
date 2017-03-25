@@ -100,7 +100,7 @@ a,
 
 %indented-paragraphs {
   & + & {
-    margin-top: -1 * $space-l;
+    margin-top: 0;
     text-indent: $space-l;
   }
 }
@@ -108,7 +108,7 @@ a,
 p {
   @extend %indented-paragraphs;
 
-  margin-bottom: $space-l;
+  // margin-bottom: $space-l;
   font-feature-settings: $font-features, 'onum';
 }
 
@@ -121,6 +121,12 @@ h1,
 h2,
 h3 {
   @include hyphensify;
+  font-size: modular-scale(2);
+  line-height: $line-height-heading;
+}
+
+h3 {
+  font-size: modular-scale(0);
 }
 
 blockquote,
@@ -198,11 +204,26 @@ abbr {
 
 .sub-title {
   @extend %all-to-small-caps;
-  font-family: $font-family;
+  margin: 0;
+  font-family: $font-family-alt;
   font-weight: $font-weight;
   color: color('text-light');
 
   @include bp(medium) {
     font-size: modular-scale(-1);
   }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.align-h-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text-align-center {
+  text-align: center;
 }

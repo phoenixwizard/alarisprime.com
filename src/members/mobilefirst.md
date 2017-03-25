@@ -1,7 +1,6 @@
 ---
 name: MobileFirst Applications
 logoUrl: /images/logo-mobilefirst.svg
-logoLarge: true
 
 socialNetworks:
   - title: GitHub

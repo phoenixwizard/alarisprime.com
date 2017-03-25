@@ -4,6 +4,7 @@
 
 .hero__text-unit {
   @include grid-column(5);
+  padding-bottom: $space-xl;
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(6);

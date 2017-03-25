@@ -1,8 +1,9 @@
-// .form {}
+.form {
+  padding-bottom: $space-m;
+}
 
 .input-label {
   display: block;
-  margin-bottom: $space-s;
   color: color('text-light');
   font-feature-settings: $font-features, 'smcp', 'c2sc';
 }
@@ -18,6 +19,10 @@
   &:active {
     border-color: color('border')-dark;
   }
+
+  .input-label + & {
+    margin-top: $space-xs;
+  }
 }
 
 .input-textarea {
@@ -27,11 +32,9 @@
   // @include bp(medium) {}
 }
 
-.form__group {
-  margin-bottom: $space-m;
-}
+// .form__group {}
 
 .form__group--minor {
-  margin-top: -1 * $space-m;
+  // margin-top: -1 * $space-m;
   font-size: modular-scale(-1);
 }

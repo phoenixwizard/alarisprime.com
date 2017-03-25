@@ -75,7 +75,7 @@ $colors: (
   'text-light':   'grey-light',
   'text-lighter': 'grey-lighter',
   'link':         'brand',
-  'link-light':   'brand' ('tint': 65%),
+  'link-light':   'grey' ('tint': 75%),
   'link-hover':   'brand' ('shade': 10%),
   'border':       'grey-lighter' ('tint': 30%),
   'border-dark':  'grey-lighter' ('shade': 20%),
@@ -117,7 +117,9 @@ $border-width:       1px;
 $border-width-large: $root-space / 8;
 $border-radius:      3px;
 
-$border: $border-width solid color('border');
+$border-style: solid;
+
+$border: $border-width $border-style color('border');
 
 // ---
 // Animation

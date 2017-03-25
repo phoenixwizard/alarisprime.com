@@ -1,14 +1,9 @@
 .organisation-logo {
   display: block;
-  height: $space-xl;
+  max-width: $space-m * 7;
 
   img {
     display: block;
-    height: 100%;
     opacity: .8;
   }
-}
-
-.organisation-logo--large {
-  height: $space-xxl;
 }

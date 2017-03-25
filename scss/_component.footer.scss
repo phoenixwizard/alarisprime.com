@@ -5,14 +5,11 @@
 .footer__content,
 .footer__legal {
   padding-bottom: $space-m;
+  font-family: $font-family-alt;
   font-size: modular-scale(-2);
 
   @include bp(medium) {
     color: color('text-lighter');
-  }
-
-  .link {
-    font-family: $font-family-alt;
   }
 }
 

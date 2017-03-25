@@ -10,15 +10,13 @@ description: The people and companies we collaborate.
 
 {% block content %}
 <article class="article">
-	<div class="article__inner">
-		<div class="article__header">
-			<h1 class="article__title">{{title}}</h1>
-		</div>
-		<div class="members">
-			{% for member in collections.members %}
-				{{ memberSnippet(member, md5, objectKeys, console) }}
-			{% endfor %}
-		</div>
+	<div class="article__header">
+		<h1 class="article__title">{{title}}</h1>
+	</div>
+	<div class="article__content">
+		{% for member in collections.members %}
+			{{ memberSnippet(member, md5, objectKeys, console) }}
+		{% endfor %}
 	</div>
 </article>
 {% endblock %}
