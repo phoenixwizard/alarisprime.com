@@ -16,7 +16,7 @@
 		{% endif %}
 		<nav class="network-list">
 			{% for network in metaData.socialNetworks | sort(false, false, 'title') %}
-				<a href="{{ network.url }}" title="{{ network.title }}">{{ network.title }}</span></a>
+				<a href="{{ network.url }}" title="{{ network.title }}"><span class="network-list__title">{{ network.title }}</span></a>
 			{% endfor %}
 		</nav>
 	</div>

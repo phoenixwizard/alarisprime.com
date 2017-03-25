@@ -21,13 +21,13 @@
   font-weight: $font-weight;
   color: color('text-light');
 
-  background-color: color('white');
-  box-shadow: (-1 * $space-default / 4) 0 color('white'), ($space-default / 4) 0 color('white');
+  background-color: color('bg');
+  box-shadow: (-1 * $space-default / 4) 0 color('bg'), ($space-default / 4) 0 color('bg');
   font-feature-settings: $font-features, 'smcp', 'c2sc';
 
   @include bp(medium) {
     margin-left: ($space-l);
-    box-shadow: (-1 * $space-s) 0 color('white'), ($space-s) 0 color('white');
+    box-shadow: (-1 * $space-s) 0 color('bg'), ($space-s) 0 color('bg');
   }
 }
 

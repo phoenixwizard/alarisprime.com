@@ -4,10 +4,14 @@
 
   a {
     @extend %link-major;
-    font-size: strip-units(modular-scale(-1)) * 1rem;
+    font-size: 1rem;
 
     &::after {
       content: ' · ';
+
+      @include bp(large) {
+        font-size: modular-scale(-1);
+      }
     }
 
     &:last-of-type {
@@ -15,5 +19,11 @@
         content: '';
       }
     }
+  }
+}
+
+.network-list__title {
+  @include bp(large) {
+    font-size: modular-scale(-1);
   }
 }
