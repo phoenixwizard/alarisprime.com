@@ -1,18 +1,18 @@
 // ---
 // The Base
 // ---
-$root-font-size-px: 18;
-$root-line-height: 30;
+$root-font-size-px:  17;
+$root-line-height:   28;
 $root-scaling-ratio: 1.333;
 
 // ---
 // Vendor
 // ---
-$em-base: $root-font-size-px * 1px;
+$em-base:             $root-font-size-px * 1px;
 $modular-scale-ratio: $root-scaling-ratio;
 
-// Only mixins and extended vendors, so that it can be used in this settings
-// and other styles.
+// Only mixins and extended vendors, so that it can
+// be used in this settings and other styles.
 @import 'bourbon/app/assets/stylesheets/bourbon';
 @import 'accoutrement-color/sass/color';
 
@@ -48,15 +48,15 @@ $colors: (
 // Typography
 // ---
 $fallback-font-families: 'Source Sans Pro', 'Open Sans', Avenir, 'Gill Sans MT', 'Gill Sans', Corbel, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family:         'skolar-latin', $fallback-font-families;
-$font-family-alt: 'soleil', $fallback-font-families;
+$font-family:            'skolar-latin', $fallback-font-families;
+$font-family-alt:        'soleil', $fallback-font-families;
 
 $font-size: #{$root-font-size-px}px;
 $font-weight:      400;
 $font-weight-bold: 600;
 
-$line-height-px: $root-line-height * 1px;
-$line-height: $root-line-height / $root-font-size-px;
+$line-height-px:      $root-line-height * 1px;
+$line-height:         $root-line-height / $root-font-size-px;
 $line-height-heading: 1.33333;
 
 $font-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
@@ -78,7 +78,7 @@ $space-xxl: $space-default * 8;
 // ---
 // Border
 // ---
-$border-width: 1px;
+$border-width:  1px;
 $border-radius: 3px;
 
 $border: $border-width solid color('border');
