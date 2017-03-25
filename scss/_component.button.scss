@@ -6,13 +6,13 @@ $button-height: $space-x * 1.5;
   font-size: modular-scale(-1);
   font-weight: $font-weight-bold;
   line-height: $button-height;
-  color: $color-brand;
+  color: color('brand');
   text-align: center;
   text-align: center;
   text-shadow: none;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: $color-highlight;
+  background-color: color('highlight');
   border-radius: $border-radius;
   box-shadow: none;
 
@@ -20,20 +20,20 @@ $button-height: $space-x * 1.5;
   &:focus,
   &:active {
     text-shadow: none;
-    background-color: mix($color-shadow, $color-highlight, 10%);
+    background-color: color('dark');
     box-shadow: none;
   }
 }
 
 .button--primary {
-  color: $color-highlight;
-  background-color: $color-brand;
+  color: color('highlight');
+  background-color: color('brand');
 
   &:hover,
   &:focus,
   &:active {
-    color: $color-highlight;
-    background-color: mix($color-shadow, $color-brand, 10%);
+    color: color('highlight');
+    background-color: color('dark');
   }
 }
 

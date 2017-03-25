@@ -8,7 +8,7 @@
 
   display: none;
 
-  background-color: transparentize($color-highlight, .15);
+  background-color: transparentize(color('highlight'), .15);
 }
 
 .overlay__container {
@@ -33,7 +33,7 @@
   max-height: 100%;
   overflow-y: auto;
 
-  background-color: $color-white;
+  background-color: color('white');
   border: $border;
 
   border-top-width: 0;
@@ -61,7 +61,7 @@
 
   font-size: modular-scale(2);
   line-height: $space-x * 3;
-  color: $color-text-light;
+  color: color('text-light');
   text-align: center;
   text-shadow: none;
   box-shadow: none;

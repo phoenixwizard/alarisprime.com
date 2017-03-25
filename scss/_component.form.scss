@@ -3,8 +3,8 @@
 .input-label {
   display: block;
   margin-bottom: $space-x / 2;
-  color: $color-text-light;
-  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
+  color: color('text-light');
+  font-feature-settings: $font-features, 'smcp', 'c2sc';
 }
 
 .input-control,
@@ -16,7 +16,7 @@
 
   &:focus,
   &:active {
-    border-color: $border-color-dark;
+    border-color: color('border')-dark;
   }
 }
 

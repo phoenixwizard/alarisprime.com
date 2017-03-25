@@ -19,15 +19,15 @@
   font-family: $font-family;
   font-size: modular-scale(1);
   font-weight: $font-weight;
-  color: $color-text-light;
+  color: color('text-light');
 
-  background-color: $color-white;
-  box-shadow: (-1 * $space-y / 4) 0 $color-white, ($space-y / 4) 0 $color-white;
-  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
+  background-color: color('white');
+  box-shadow: (-1 * $space-y / 4) 0 color('white'), ($space-y / 4) 0 color('white');
+  font-feature-settings: $font-features, 'smcp', 'c2sc';
 
   @include bp(medium) {
     margin-left: ($space-y * 2);
-    box-shadow: (-1 * $space-y / 2) 0 $color-white, ($space-y / 2) 0 $color-white;
+    box-shadow: (-1 * $space-y / 2) 0 color('white'), ($space-y / 2) 0 color('white');
   }
 }
 
@@ -53,7 +53,7 @@
 
     display: block;
     height: 1px;
-    background-color: $border-color;
+    background-color: color('border');
 
     content: ' ';
   }

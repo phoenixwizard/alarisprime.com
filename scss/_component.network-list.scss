@@ -1,6 +1,6 @@
 .network-list {
   font-size: 0;
-  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
+  font-feature-settings: $font-features, 'smcp', 'c2sc';
 
   a {
     @extend %link-major;

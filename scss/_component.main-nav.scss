@@ -4,17 +4,17 @@
   a {
     display: inline-block;
     padding: $space-x ($space-y / 2);
-    color: $color-text-light;
-    font-feature-settings: $opentype-features, 'smcp', 'c2sc';
+    color: color('text-light');
+    font-feature-settings: $font-features, 'smcp', 'c2sc';
 
     &:hover,
     &:active,
     &:focus {
-      color: $color-text;
+      color: color('text');
     }
 
     &.active {
-      color: $color-text-lighter;
+      color: color('text-lighter');
     }
   }
 }

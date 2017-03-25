@@ -8,7 +8,7 @@
   svg {
     display: block;
     height: 100%;
-    fill: $color-brand;
+    fill: color('brand');
   }
 }
 
@@ -19,6 +19,6 @@
 
 .logo--monochrome {
   svg {
-    fill: $color-text-lighter;
+    fill: color('text-lighter');
   }
 }

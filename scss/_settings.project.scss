@@ -20,21 +20,30 @@ $modular-scale-ratio: $root-scaling-ratio;
 // Colors
 // ---
 
-$color-brand:        #00a86b;
-$color-shadow:       #0d1c0d;
-$color-highlight:    #f2f5f5;
-$color-grey-lighter: #d1d6d4;
-$color-grey-light:   #b0bab5;
-$color-grey:         #698075;
-$color-grey-dark:    #40574d;
-$color-white:        #ffffff;
+$colors: (
+  'brand':        #00a86b,
+  'shadow':       #0d1c0d,
+  'highlight':    #f2f5f5,
+  'white':        #ffffff,
 
-$color-text: $color-shadow;
-$color-text-light: $color-grey;
-$color-text-lighter: $color-grey-light;
+  'grey-lighter': #d1d6d4,
+  'grey-light':   #b0bab5,
+  'grey':         #698075,
+  'grey-dark':    #40574d,
 
-$color-link: $color-brand;
-$color-link-hover: mix($color-shadow, $color-brand, 10%);
+  'brand-dark':   'brand' ('shade': 10%),
+
+  'text': 'shadow',
+  'text-light': 'grey',
+  'text-lighter': 'grey-light',
+
+  'link': 'brand',
+  'link-light': 'brand' ('tint': 10%),
+  'link-hover': 'brand' ('shade': 10%), // mix shadow  brand  10%
+
+  'border': 'grey-lighter' ('tint': 30%),
+  'border-dark': 'grey-lighter' ('shade': 20%),
+);
 
 // ---
 // Typography
@@ -47,13 +56,15 @@ $font-size: #{$root-font-size-px}px;
 $font-weight:      400;
 $font-weight-bold: 600;
 
-$opentype-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
+$line-height-px: $root-line-height * 1px;
+$line-height: $root-line-height / $root-font-size-px;
+$line-height-heading: 1.33333;
+
+$font-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
 
 // ---
 // Spaces
 // ---
-$line-height: 28px; // $root-line-height
-$line-height-heading: 1.33333;
 
 $space-x: 1rem * ((strip-units($line-height) / 2) / $root-font-size-px);
 $space-y: $space-x * $modular-scale-ratio;
@@ -61,13 +72,10 @@ $space-y: $space-x * $modular-scale-ratio;
 // ---
 // Border
 // ---
-$border-color: mix($color-highlight, $color-grey-lighter, 30%);
-$border-color-dark: mix($color-shadow, $color-grey-lighter, 20%);
-
 $border-width: 1px;
 $border-radius: 3px;
 
-$border: $border-width solid $border-color;
+$border: $border-width solid color('border');
 
 // ---
 // Animation

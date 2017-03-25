@@ -1,15 +1,12 @@
-:root {
-  font-size: percentage($root-font-size-px / 16);
-  line-height: 30 / $root-font-size-px;
-
-  // @include bp(medium) {
-  //   font-size: 125%; // 16px → 20px
-  // }
-}
+// :root {}
 
 html {
+  font-family: $fallback-font-families;
+  font-size: percentage($root-font-size-px / 16);
+  line-height: $root-line-height / $root-font-size-px;
+  color: color('text');
+  font-feature-settings: $font-features;
   text-rendering: geometricPrecision;
-  font-feature-settings: $opentype-features;
 
   &.wf-active {
     font-family: $font-family;
@@ -31,20 +28,20 @@ svg {
 
 %link-minor {
   color: currentColor;
-  box-shadow: 0 1px mix($color-highlight, $color-link, 50%);
+  box-shadow: 0 1px color('link-light');
   transition: color $transition-delay $transition-easing, box-shadow $transition-delay $transition-easing;
 
   &:hover,
   &:active,
   &:focus {
-    color: $color-link-hover;
-    text-shadow: 1px 1px $color-white, -1px 1px $color-white, 1px -1px $color-white, -1px -1px $color-white;
-    box-shadow: 0 1px $color-link, inset 0 -.15em $color-link; // 4px / 20px
+    color: color('link-hover');
+    text-shadow: 1px 1px color('white'), -1px 1px color('white'), 1px -1px color('white'), -1px -1px color('white');
+    box-shadow: 0 1px color('link'), inset 0 -.15em color('link'); // 4px / 20px
   }
 }
 
 %link-major {
-  color: $color-link;
+  color: color('link');
   text-shadow: none;
   box-shadow: none;
   transition: color $transition-delay $transition-easing;
@@ -52,7 +49,7 @@ svg {
   &:hover,
   &:active,
   &:focus {
-    color: $color-link-hover;
+    color: color('link-hover');
     text-shadow: none;
     box-shadow: none;
   }
@@ -82,7 +79,7 @@ p {
   @extend %indented-paragraphs;
 
   margin-bottom: $space-x * 2;
-  font-feature-settings: $opentype-features, 'onum';
+  font-feature-settings: $font-features, 'onum';
 }
 
 p + br {
@@ -109,20 +106,20 @@ figcaption {
   padding-top: $space-x * .25;
   font-size: modular-scale(-1);
   line-height: $space-x * 1.25;
-  color: $color-text-light;
+  color: color('text-light');
 }
 
 blockquote {
   font-family: $font-family-heading;
   font-size: modular-scale(1);
-  font-feature-settings: $opentype-features, 'dlig';
+  font-feature-settings: $font-features, 'dlig';
 
   cite {
     display: block;
 
     font-size: modular-scale(-1);
     font-style: normal;
-    color: $color-text-lighter;
+    color: color('text-lighter');
 
     &::before {
       content: '—';
@@ -138,18 +135,18 @@ em {
 }
 
 abbr {
-  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
+  font-feature-settings: $font-features, 'smcp', 'c2sc';
 
   &[title] {
     text-decoration: none;
     cursor: help;
-    border-bottom: $border-width dotted $border-color-dark;
+    border-bottom: $border-width dotted color('border-dark');
   }
 }
 
 
 %small-caps {
-  font-feature-settings: $opentype-features, 'smcp';
+  font-feature-settings: $font-features, 'smcp';
 }
 
 .small-caps {
@@ -157,7 +154,7 @@ abbr {
 }
 
 %caps-to-small-caps {
-  font-feature-settings: $opentype-features, 'c2sc';
+  font-feature-settings: $font-features, 'c2sc';
 }
 
 .caps-to-small-caps {
@@ -165,7 +162,7 @@ abbr {
 }
 
 %all-to-small-caps {
-  font-feature-settings: $opentype-features, 'smcp', 'c2sc';
+  font-feature-settings: $font-features, 'smcp', 'c2sc';
 }
 
 .all-to-small-caps {
@@ -176,7 +173,7 @@ abbr {
   @extend %all-to-small-caps;
   font-family: $font-family;
   font-weight: $font-weight;
-  color: $color-text-light;
+  color: color('text-light');
 
   @include bp(medium) {
     font-size: modular-scale(-1);
