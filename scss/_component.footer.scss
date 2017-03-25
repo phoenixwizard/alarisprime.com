@@ -4,7 +4,7 @@
 
 .footer__content,
 .footer__legal {
-  padding: $space-m 0;
+  padding-bottom: $space-m;
   font-size: modular-scale(-2);
 
   @include bp(medium) {

@@ -3,60 +3,30 @@
 }
 
 .hero-quote__inner {
-  // @include span-columns(12);
-  padding: ($space-l) $space-default;
+  @include grid-column(5);
+  padding: $space-l 0;
   font-weight: $font-weight-bold;
   color: color('text');
 
-  @include bp(medium) {
-    // @include span-columns(9);
-
-    padding-right: ($space-l);
-    padding-left: ($space-l);
+  @include grid-media($neat-grid-medium) {
+    @include grid-column(11);
   }
 
-  @include bp(large) {
-    // @include span-columns(7);
-    padding-top: ($space-xl);
-    padding-bottom: ($space-xl);
-  }
-
-  a {
-    color: color('text');
+  @include grid-media($neat-grid-large) {
+    @include grid-column(11);
+    @include grid-push(2);
+    padding-top: $space-l;
+    padding-bottom: $space-l;
   }
 }
 
 .hero-quote__quote {
-  position: relative;
-  padding-left: ($space-default);
-  margin-bottom: 0;
-  margin-left: -1 * ($space-default);
+  margin: 0;
   font-size: modular-scale(1);
   line-height: $line-height-heading;
 
-  @include bp(medium) {
+  @include bp(large) {
     font-size: modular-scale(2);
   }
 }
 
-.hero-quote__line {
-  &:first-of-type {
-    &::before {
-      position: absolute;
-      top: 0;
-      left: .429273985em; // 10.3/23.994
-
-      content: open-quote;
-
-      @include bp(medium) {
-        left: .185717743em; // 6.6/35.5378
-      }
-    }
-  }
-
-  &:last-of-type {
-    &::after {
-      content: close-quote;
-    }
-  }
-}

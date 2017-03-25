@@ -4,7 +4,7 @@
 
 .article__inner {
   // @include span-columns(12);
-  padding: ($space-l) $space-default;
+  padding: ($space-l) $space-m;
 
   @include bp(medium) {
     padding-right: ($space-l);
@@ -14,7 +14,7 @@
 
 .article__title {
   display: inline-block;
-  margin-left: $space-default;
+  margin-left: $space-m;
 
   font-family: $font-family;
   font-size: modular-scale(1);
@@ -22,7 +22,7 @@
   color: color('text-light');
 
   background-color: color('bg');
-  box-shadow: (-1 * $space-default / 4) 0 color('bg'), ($space-default / 4) 0 color('bg');
+  box-shadow: (-1 * $space-m / 4) 0 color('bg'), ($space-m / 4) 0 color('bg');
   font-feature-settings: $font-features, 'smcp', 'c2sc';
 
   @include bp(medium) {
@@ -35,9 +35,9 @@
   position: relative;
   z-index: 1;
 
-  margin-right: -1 * $space-default;
+  margin-right: -1 * $space-m;
   margin-bottom: ($space-l);
-  margin-left: -1 * $space-default;
+  margin-left: -1 * $space-m;
 
   @include bp(medium) {
     margin-right: -1 * ($space-l);

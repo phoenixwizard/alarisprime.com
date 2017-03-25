@@ -23,6 +23,25 @@ html {
   }
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+blockquote,
+figure,
+table,
+ul {
+  margin: 0;
+}
+
+body {
+  // Refer 'Margins' in the article http://www.heydonworks.com/article/on-writing-less-damn-code
+  * + * {
+    margin-top: $space-m;
+  }
+}
+
 img,
 svg {
   display: block;

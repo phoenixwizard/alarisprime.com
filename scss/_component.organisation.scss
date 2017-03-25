@@ -13,7 +13,7 @@
 .organisation {
   width: 100%;
   margin-right: $space-l;
-  margin-bottom: $space-default;
+  margin-bottom: $space-m;
 
   @include bp(medium) {
     width: auto;

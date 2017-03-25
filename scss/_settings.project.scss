@@ -102,8 +102,6 @@ $font-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
 // Spaces
 // ---
 
-$space-default: 1rem * (($root-line-height / 2) / $root-font-size-px);
-
 $space-xxs: $root-space / 8;
 $space-xs:  $root-space / 4;
 $space-s:   $root-space / 2;

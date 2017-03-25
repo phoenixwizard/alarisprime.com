@@ -2,7 +2,7 @@ $button-height: $space-l;
 
 .button {
   display: inline-block;
-  padding: 0 $space-default;
+  padding: 0 $space-m;
   font-family: $font-family-alt;
   font-size: modular-scale(-1);
   font-weight: $font-weight-bold;
@@ -14,7 +14,6 @@ $button-height: $space-l;
   white-space: nowrap;
   vertical-align: middle;
   background-color: color('highlight');
-  border-radius: $border-radius;
   box-shadow: none;
 
   &:hover,
@@ -39,7 +38,7 @@ $button-height: $space-l;
 }
 
 .button--small {
-  padding: ($space-default / 3 - (2 / $root-font-size-px)) ($space-s) ($space-default / 3);
+  padding: ($space-m / 3 - (2 / $root-font-size-px)) ($space-s) ($space-m / 3);
 }
 
 .button--inline {

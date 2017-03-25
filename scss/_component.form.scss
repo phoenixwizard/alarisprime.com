@@ -10,7 +10,7 @@
 .input-control,
 .input-textarea {
   width: 100%;
-  padding: ($space-default / 3);
+  padding: ($space-m / 3);
   border: $border;
   outline: none;
 
@@ -28,10 +28,10 @@
 }
 
 .form__group {
-  margin-bottom: $space-default;
+  margin-bottom: $space-m;
 }
 
 .form__group--minor {
-  margin-top: -1 * $space-default;
+  margin-top: -1 * $space-m;
   font-size: modular-scale(-1);
 }
