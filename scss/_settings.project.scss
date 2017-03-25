@@ -113,9 +113,10 @@ $space-xxl: $root-space * 8;
 // ---
 // Border
 // ---
-$border-width:       1px;
-$border-width-large: $root-space / 8;
-$border-radius:      3px;
+$border-width:    1px;
+$border-width-l:  $root-space / 8;
+$border-width-xl: $root-space / 4;
+$border-radius:   3px;
 
 $border-style: solid;
 
