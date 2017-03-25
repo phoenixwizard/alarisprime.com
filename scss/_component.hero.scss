@@ -1,5 +1,5 @@
 .hero {
-  @include outer-container;
+  // @include outer-container;
 }
 
 .hero__inner {
@@ -18,13 +18,13 @@
 }
 
 .hero__text-unit {
-  @include span-columns(12);
+  // @include span-columns(12);
 
   @include bp(medium) {
-    @include span-columns(9);
+    // @include span-columns(9);
   }
 
   @include bp(large) {
-    @include span-columns(7);
+    // @include span-columns(7);
   }
 }

@@ -1,5 +1,5 @@
 .footer {
-  @include outer-container;
+  // @include outer-container;
 }
 
 .footer__inner {
@@ -26,22 +26,22 @@
 
 .footer__content {
   @include bp(medium) {
-    @include span-columns(9);
+    // @include span-columns(9);
   }
 
   @include bp(large) {
-    @include span-columns(7);
+    // @include span-columns(7);
   }
 }
 
 .footer__legal {
   .footer__content + & {
     @include bp(medium) {
-      @include span-columns(3);
+      // @include span-columns(3);
     }
 
     @include bp(large) {
-      @include span-columns(5);
+      // @include span-columns(5);
     }
 
     margin-top: $space-x;

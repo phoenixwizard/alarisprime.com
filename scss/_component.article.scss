@@ -1,9 +1,9 @@
 .article {
-  @include outer-container;
+  // @include outer-container;
 }
 
 .article__inner {
-  @include span-columns(12);
+  // @include span-columns(12);
   padding: ($space-x * 2) $space-y;
 
   @include bp(medium) {
@@ -60,14 +60,14 @@
 }
 
 .article__content {
-  @include span-columns(12);
+  // @include span-columns(12);
 
   @include bp(medium) {
-    @include span-columns(9);
+    // @include span-columns(9);
   }
 
   @include bp(large) {
-    @include span-columns(7);
+    // @include span-columns(7);
   }
 }
 
@@ -78,7 +78,7 @@
 .article--full-width {
   .article__content {
     @include bp(medium) {
-      @include span-columns(12);
+      // @include span-columns(12);
     }
   }
 }

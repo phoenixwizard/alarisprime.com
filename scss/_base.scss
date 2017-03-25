@@ -1,7 +1,10 @@
 :root {
-  @include bp(medium) {
-    font-size: 125%; // 16px → 20px
-  }
+  font-size: percentage($root-font-size-px / 16);
+  line-height: 30 / $root-font-size-px;
+
+  // @include bp(medium) {
+  //   font-size: 125%; // 16px → 20px
+  // }
 }
 
 html {

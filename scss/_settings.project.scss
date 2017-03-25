@@ -1,5 +1,27 @@
-$color-brand:        $site-brand-color;
-$color-shadow:       $root-color; // #0d1c0d;
+// ---
+// The Base
+// ---
+$root-font-size-px: 18;
+$root-line-height: 30;
+$root-scaling-ratio: 1.333;
+
+// ---
+// Vendor
+// ---
+$em-base: $root-font-size-px * 1px;
+$modular-scale-ratio: $root-scaling-ratio;
+
+// Only mixins and extended vendors, so that it can be used in this settings
+// and other styles.
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'accoutrement-color/sass/color';
+
+// ---
+// Colors
+// ---
+
+$color-brand:        #00a86b;
+$color-shadow:       #0d1c0d;
 $color-highlight:    #f2f5f5;
 $color-grey-lighter: #d1d6d4;
 $color-grey-light:   #b0bab5;
@@ -14,9 +36,12 @@ $color-text-lighter: $color-grey-light;
 $color-link: $color-brand;
 $color-link-hover: mix($color-shadow, $color-brand, 10%);
 
+// ---
 // Typography
-$font-family:         'skolar-sans-latin', $root-font-family;
-$font-family-heading: 'skolar-latin', $root-font-family;
+// ---
+$fallback-font-families: 'Source Sans Pro', 'Open Sans', Avenir, 'Gill Sans MT', 'Gill Sans', Corbel, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family:         'skolar-latin', $fallback-font-families;
+$font-family-heading: 'soleil', $fallback-font-families;
 
 $font-size: #{$root-font-size-px}px;
 $font-weight:      400;
@@ -24,14 +49,18 @@ $font-weight-bold: 600;
 
 $opentype-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
 
-// Spacing
+// ---
+// Spaces
+// ---
 $line-height: 28px; // $root-line-height
 $line-height-heading: 1.33333;
 
 $space-x: 1rem * ((strip-units($line-height) / 2) / $root-font-size-px);
 $space-y: $space-x * $modular-scale-ratio;
 
+// ---
 // Border
+// ---
 $border-color: mix($color-highlight, $color-grey-lighter, 30%);
 $border-color-dark: mix($color-shadow, $color-grey-lighter, 20%);
 
@@ -40,6 +69,12 @@ $border-radius: 3px;
 
 $border: $border-width solid $border-color;
 
-// transition
+// ---
+// Animation
+// ---
+
+// Delay
 $transition-delay: .1s;
+
+// Easing
 $transition-easing: ease-out;
