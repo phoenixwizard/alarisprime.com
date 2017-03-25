@@ -1,10 +1,9 @@
 .main-nav {
-  display: flex;
-
   a {
-    display: inline-block;
-    padding: $space-default ($space-s);
+    @extend %link-major;
+    display: block;
     font-family: $font-family-alt;
+    font-size: modular-scale(-1);
     color: color('text-light');
     font-feature-settings: $font-features, 'smcp', 'c2sc';
 

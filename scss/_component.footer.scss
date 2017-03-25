@@ -1,23 +1,11 @@
 .footer {
-  // @include outer-container;
-}
-
-.footer__inner {
-  @include clearfix;
-
-  padding: ($space-l) $space-default;
-  border-top: $border;
-
-  @include bp(medium) {
-    padding-right: ($space-l);
-    padding-left: ($space-l);
-  }
+  @include grid-container;
 }
 
 .footer__content,
 .footer__legal {
-  font-size: modular-scale(-1);
-  line-height: 2 * $space-default;
+  padding: $space-m 0;
+  font-size: modular-scale(-2);
 
   @include bp(medium) {
     color: color('text-lighter');
@@ -29,30 +17,29 @@
 }
 
 .footer__content {
-  @include bp(medium) {
-    // @include span-columns(9);
+  @include grid-column(5);
+
+  @include grid-media($neat-grid-medium) {
+    @include grid-column(3);
   }
 
-  @include bp(large) {
-    // @include span-columns(7);
+  @include grid-media($neat-grid-large) {
+    @include grid-column(4);
   }
 }
 
 .footer__legal {
-  .footer__content + & {
-    @include bp(medium) {
-      // @include span-columns(3);
-    }
+  @include grid-column(5);
+  margin-top: $space-m;
 
-    @include bp(large) {
-      // @include span-columns(5);
-    }
+  @include grid-media($neat-grid-medium) {
+    @include grid-column(2);
+    @include grid-push(6);
+    margin-top: 0;
+  }
 
-    margin-top: $space-default;
-
-    @include bp(medium) {
-      margin-top: 0;
-      text-align: right;
-    }
+  @include grid-media($neat-grid-large) {
+    @include grid-column(3);
+    @include grid-push(9);
   }
 }

@@ -8,17 +8,6 @@
   svg {
     display: block;
     height: 100%;
-    fill: color('brand');
-  }
-}
-
-.logo--tiny {
-  height: $space-s;
-  vertical-align: baseline;
-}
-
-.logo--monochrome {
-  svg {
-    fill: color('text-lighter');
+    fill: currentColor;
   }
 }

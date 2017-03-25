@@ -1,7 +1,7 @@
 {% from "../macros/contact-trigger-tag.njk" import contactTriggerTag %}
-
+{% from "../macros/divider.njk" import divider %}
+{{ divider() }}
 <div class="footer">
-	<div class="footer__inner">
 		{% if not hideContactOnFooter %}
 		<div class="footer__content">
 			<a class="link link--minor" href="{{ site.newsletterSignupUrl }}" rel="external">Newsletter</a>,
@@ -10,5 +10,4 @@
 		</div>
 		{% endif %}
 		<div class="footer__legal">&copy; {{ site.date.getFullYear() }} Alaris Prime</div>
-	</div>
 </div>

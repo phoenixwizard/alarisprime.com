@@ -1,5 +1,5 @@
 .article {
-  // @include outer-container;
+  @include grid-container;
 }
 
 .article__inner {

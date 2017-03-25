@@ -1,5 +1,5 @@
 .hero {
-  // @include outer-container;
+  @include grid-container;
 }
 
 .hero__inner {

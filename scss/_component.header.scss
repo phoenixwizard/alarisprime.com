@@ -1,60 +1,48 @@
 .header {
-  // @include outer-container;
-
-  a {
-    @extend %link-major;
-  }
-}
-
-.header__inner {
-  display: flex;
-  flex-wrap: wrap;
-
-  @include bp(large) {
-    align-items: center;
-    padding: ($space-l);
-  }
+  @include grid-container;
 }
 
 .header__nav,
 .header__brand {
-  width: 100%;
-
-  @include bp(large) {
-    width: auto;
-  }
+  padding: $space-m 0;
 }
 
 .header__brand {
-  padding: (2 * $space-default) $space-default 0;
+  @include grid-column(2);
 
-  @include bp(medium) {
-    padding-right: ($space-l);
-    padding-left: ($space-l);
+  @include grid-media($neat-grid-medium) {
+    @include grid-column(3);
   }
 
-  @include bp(large) {
-    padding: 0 $space-default 0 0;
+  @include grid-media($neat-grid-large) {
+    @include grid-column(4);
   }
 }
 
 .header__nav {
-  @include touch-scroll;
-  padding-left: ($space-s);
-  overflow-x: auto;
-  overflow-y: hidden;
+  @include grid-column(1);
+  @include grid-push(2);
 
-  @include bp(medium) {
-    padding-left: 1.5 * $space-default;
+  @include grid-media($neat-grid-medium) {
+    @include grid-column(2);
+    @include grid-push(6);
   }
 
-  @include bp(large) {
-    padding-left: 0;
-    margin-right: -1 * ($space-s);
+  @include grid-media($neat-grid-large) {
+    @include grid-column(3);
+    @include grid-push(9);
   }
+}
 
-  .main-nav {
-    height: auto;
-    white-space: nowrap;
+.header__logo-link {
+  @extend %link-major;
+  display: block;
+  line-height: 1;
+  color: color('text');
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: color('link');
   }
 }
