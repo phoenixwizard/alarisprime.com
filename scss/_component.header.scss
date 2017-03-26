@@ -21,8 +21,8 @@
 }
 
 .header__nav {
-  @include grid-column(1);
-  @include grid-push(2);
+  @include grid-column(2);
+  @include grid-push(3);
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(2);

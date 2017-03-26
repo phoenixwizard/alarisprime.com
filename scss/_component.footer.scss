@@ -5,6 +5,7 @@
 .footer__content,
 .footer__legal {
   padding-bottom: $space-m;
+  margin-top: 0;
   font-family: $font-family-alt;
   font-size: modular-scale(-1);
 
@@ -26,13 +27,11 @@
 }
 
 .footer__legal {
-  @include grid-column(5);
-  margin-top: $space-m;
+  @include grid-column(2);
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(2);
     @include grid-push(6);
-    margin-top: 0;
   }
 
   @include grid-media($neat-grid-large) {

@@ -5,7 +5,7 @@
 // .article__title {}
 
 .article__header {
-  @include grid-column(5);
+  @include grid-column(7);
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(6);
@@ -19,7 +19,7 @@
 }
 
 .article__content {
-  @include grid-column(5);
+  @include grid-column(7);
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(11);
@@ -31,7 +31,7 @@
 }
 
 .article__content--column {
-  @include grid-column(5);
+  @include grid-column(7);
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(6);
@@ -47,7 +47,7 @@
 .article--full-width {
   .article__header,
   .article__content--column {
-    @include grid-column(5);
+    @include grid-column(7);
 
     @include grid-media($neat-grid-medium) {
       @include grid-column(11);

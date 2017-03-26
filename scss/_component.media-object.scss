@@ -14,7 +14,7 @@
 }
 
 .media-object__figure {
-  @include grid-column(5);
+  @include grid-column(7);
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(3);
@@ -26,10 +26,10 @@
 }
 
 .media-object__content {
-  @include grid-column(5);
+  @include grid-column(7);
 
   @include grid-media($neat-grid-medium) {
-    @include grid-column(6);
+    @include grid-column(8);
   }
 
   @include grid-media($neat-grid-large) {
@@ -38,10 +38,10 @@
 }
 
 .media-object__footer {
-  @include grid-column(5);
+  @include grid-column(7);
 
   @include grid-media($neat-grid-medium) {
-    @include grid-column(6);
+    @include grid-column(8);
     @include grid-push(3);
   }
 

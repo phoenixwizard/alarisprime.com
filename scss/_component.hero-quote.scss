@@ -3,7 +3,7 @@
 }
 
 .hero-quote__inner {
-  @include grid-column(5);
+  @include grid-column(7);
   padding: $space-l 0;
   font-weight: $font-weight-bold;
   color: color('text');
