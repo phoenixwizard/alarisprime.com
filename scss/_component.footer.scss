@@ -12,6 +12,10 @@
   @include bp(medium) {
     color: color('text-lighter');
   }
+
+  @include bp(large) {
+    font-size: modular-scale(-2);
+  }
 }
 
 .footer__content {
