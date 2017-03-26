@@ -4,9 +4,12 @@
     display: block;
     margin: 0;
     font-family: $font-family-alt;
-    font-size: modular-scale(-1);
     color: color('text-light');
     font-feature-settings: $font-features, 'smcp', 'c2sc';
+
+    @include bp(large) {
+      font-size: modular-scale(-1);
+    }
 
     &:hover,
     &:active,
