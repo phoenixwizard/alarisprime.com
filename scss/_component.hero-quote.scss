@@ -21,10 +21,14 @@
 }
 
 .hero-quote__quote {
-  min-height: 50vmin;
+  min-height: 56.27813555vmin;
   margin: 0;
-  font-size: modular-scale(2);
+  font-size: modular-scale(1);
   line-height: $line-height-heading;
+
+  @include bp(small-medium) {
+    font-size: modular-scale(2);
+  }
 
   @include bp(medium) {
     min-height: 0;
