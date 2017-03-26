@@ -10,7 +10,9 @@
 .media-object__figure,
 .media-object__content,
 .media-object__footer {
-  margin: 0;
+  @includ bp(medium) {
+    margin: 0;
+  }
 }
 
 .media-object__figure {

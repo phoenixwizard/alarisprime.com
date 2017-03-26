@@ -28,6 +28,14 @@
   @include grid-media($neat-grid-large) {
     @include grid-column(16);
   }
+
+  .article__header + & {
+    margin-top: $space-l;
+
+    @include bp(medium) {
+      margin-top: inherit;
+    }
+  }
 }
 
 .article__content--column {
