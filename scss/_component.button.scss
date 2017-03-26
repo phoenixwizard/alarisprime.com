@@ -4,7 +4,7 @@ $button-height: $space-l;
   display: inline-block;
   padding: 0 $space-m;
   font-family: $font-family-alt;
-  // font-size: modular-scale(-1);
+  font-size: modular-scale(-1);
   font-weight: $font-weight-bold;
   line-height: $button-height;
   color: color('brand');
@@ -15,6 +15,10 @@ $button-height: $space-l;
   background-color: color('highlight');
   border: 0;
   box-shadow: none;
+
+  @include bp(medium) {
+    font-size: modular-scale(0);
+  }
 
   &:hover,
   &:focus,
