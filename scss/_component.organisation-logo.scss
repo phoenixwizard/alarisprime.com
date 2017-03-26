@@ -1,8 +1,15 @@
 .organisation-logo {
   display: block;
-  max-width: $space-m * 7;
+  max-height: $size-m;
+  max-width: $size-l;
+
+  @include bp(medium) {
+    max-height: $size-s;
+    max-width: $size-m;
+  }
 
   img {
+    max-height: 100%;
     display: block;
     opacity: .8;
   }

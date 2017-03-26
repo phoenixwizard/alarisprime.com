@@ -111,6 +111,18 @@ $space-xl:  $root-space * 4;
 $space-xxl: $root-space * 8;
 
 // ---
+// Spaces
+// ---
+
+$size-xxs: $root-space * 2;
+$size-xs:  $root-space * 3;
+$size-s:   $root-space * 5;
+$size-m:   $root-space * 8;
+$size-l:   $root-space * 13;
+$size-xl:  $root-space * 21;
+$size-xxl: $root-space * 34;
+
+// ---
 // Border
 // ---
 $border-width:    1px;
