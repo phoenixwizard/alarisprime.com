@@ -1,12 +1,12 @@
 .avatar,
 .avatar__image {
-  width: $space-xxl;
-  height: $space-xxl;
+  width: $size-m;
+  height: $size-m;
   border-radius: 2000px;
 
   @include bp(medium) {
-    width: $space-xl;
-    height: $space-xl;
+    width: $size-s;
+    height: $size-s;
   }
 }
 
