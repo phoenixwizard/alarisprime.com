@@ -1,5 +1,5 @@
 .network-list {
-  font-family: $font-family-alt;
+  @include font-family-alt;
   font-size: 0;
   font-feature-settings: $font-features, 'smcp', 'c2sc';
 

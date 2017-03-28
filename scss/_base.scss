@@ -203,9 +203,8 @@ abbr {
 }
 
 .sub-title {
-  @extend %all-to-small-caps;
+  @include font-family-alt;
   margin: 0;
-  font-family: $font-family-alt;
   font-weight: $font-weight;
   color: color('text-light');
 

@@ -1,46 +1,42 @@
-$button-height: $space-l;
+$height-button: $space-l;
+$height-button-small: $space-m;
 
 .button {
+  @include font-family-alt;
   display: inline-block;
-  padding: 0 $space-m;
-  font-family: $font-family-alt;
-  font-size: modular-scale(-1);
-  font-weight: $font-weight-bold;
-  line-height: $button-height;
-  color: color('brand');
+  padding-right: $space-m;
+  padding-left: $space-m;
+  line-height: $height-button;
+  color: color('text-light');
   text-align: center;
   text-shadow: none;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: color('highlight');
-  border: 0;
+  background-color: transparent;
+  border: $border-width-l $border-style;
+  border-radius: $border-radius-circle;
   box-shadow: none;
+
+  @include bp(medium) {
+    font-size: modular-scale(-1);
+  }
 
   &:hover,
   &:focus,
   &:active {
+    color: color('text');
     text-shadow: none;
-    background-color: color('dark');
+    cursor: pointer;
     box-shadow: none;
   }
 }
 
 .button--primary {
-  color: color('highlight');
-  background-color: color('brand');
+  color: color('link');
 
   &:hover,
   &:focus,
   &:active {
-    color: color('highlight');
-    background-color: color('dark');
+    color: color('link-hover');
   }
-}
-
-.button--small {
-  padding: ($space-m / 3 - (2 / $root-font-size-px)) ($space-s) ($space-m / 3);
-}
-
-.button--inline {
-  vertical-align: baseline;
 }

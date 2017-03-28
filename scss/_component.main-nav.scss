@@ -1,9 +1,9 @@
 .main-nav {
   a {
     @extend %link-major;
+    @include font-family-alt;
     display: block;
     margin: 0;
-    font-family: $font-family-alt;
     color: color('text-light');
     font-feature-settings: $font-features, 'smcp', 'c2sc';
 

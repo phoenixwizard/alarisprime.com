@@ -4,9 +4,9 @@
 
 .footer__content,
 .footer__legal {
+  @include font-family-alt;
   padding-bottom: $space-m;
   margin-top: 0;
-  font-family: $font-family-alt;
   font-size: modular-scale(-1);
 
   @include bp(medium) {
