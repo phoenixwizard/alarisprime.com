@@ -2,7 +2,7 @@
 .avatar__image {
   width: $size-m;
   height: $size-m;
-  border-radius: 2000px;
+  border-radius: $border-radius-circle;
 
   @include bp(medium) {
     width: $size-s;
@@ -23,7 +23,7 @@
     left: $space-xxs;
     display: block;
     border: $border-width-l $border-style color('bg');
-    border-radius: 2000px;
+    border-radius: $border-radius-circle;
     content: '';
   }
 }
