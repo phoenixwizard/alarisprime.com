@@ -21,7 +21,7 @@
 					<input class="input-control" type="email" name="email" id="contact-form-email" required>
 				</div>
 				<div class="form__group">
-					<label class="input-label" for="contact-form-email">Subject</label>
+					<label class="input-label" for="contact-form-subject">Subject</label>
 					<input class="input-control" type="text" name="_subject" id="contact-form-subject" required>
 				</div>
 				<div class="form__group">
@@ -42,9 +42,9 @@ __Your Name__</textarea>
 				<input type="text" name="_gotcha" style="display:none" />
 				<input type="hidden" name="page-identifier" style="display:none" value="{{pageIdentifier}}" />
 				<input type="hidden" name="_next" value="{{ successUrl }}" />
-				<input class="button button--primary button--small" type="submit" value="Send the message">
+				<input class="button button--primary" type="submit" value="Send the message">
 				{% if isDiscardable %}
-				<a href="javascript:;" class="button button--small js-overlay-close">Discard</a>
+				<a href="javascript:;" class="button js-overlay-close">Discard</a>
 				{% endif %}
 			</form>
 		</div>
