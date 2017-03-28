@@ -23,6 +23,8 @@
 .header__nav {
   @include grid-column(2);
   @include grid-push(3);
+  position: relative;
+  top: -1 * .4em; // 12px / 30px
 
   @include grid-media($neat-grid-medium) {
     @include grid-column(2);
