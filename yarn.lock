@@ -960,9 +960,9 @@ bourbon-neat@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bourbon-neat/-/bourbon-neat-2.0.0.tgz#16079272c3941e767da041e75ee86cf4d5ab4c9e"
 
-bourbon@4.3.3:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.3.tgz#c51cb80c6a437aa55c16659597e5c4a86884ea38"
+bourbon@4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.4.tgz#4da380029e92c0c8f9764c779451a134b11e7cc3"
 
 boxen@^1.0.0:
   version "1.0.0"
